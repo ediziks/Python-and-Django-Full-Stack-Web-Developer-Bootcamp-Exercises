@@ -1,0 +1,36 @@
+h1{
+	font-family: 'Ma Shan Zheng', cursive;
+	text-align: center; 
+}
+
+.mito{
+	margin: auto;
+	padding: 1%;
+}
+
+td{
+	width: 200px;
+	height: 500px;
+	padding: 50px;
+	border: 3px solid white;
+}
+
+#one{
+	background-color: #264653;
+}
+
+#two{
+	background-color: #2A9D8F;
+}
+
+#three{
+	background-color: #E9C46A;
+}
+
+#four{
+	background-color: #F4A261;
+}
+
+#five{
+	background-color: #E76F51;
+}

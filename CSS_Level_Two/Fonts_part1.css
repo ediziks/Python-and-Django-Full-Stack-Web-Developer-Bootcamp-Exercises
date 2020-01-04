@@ -1,0 +1,24 @@
+h1{
+	font-family: calibri;
+}
+
+p{
+	font-family: calibri light;
+}
+
+body{
+	font-size: 24px;
+}
+
+#two{
+	font-size: 1.0em;
+}
+
+p{
+	font-style: italic;
+	font-weight: bold;
+}
+
+h1{
+	text-align: center;
+}

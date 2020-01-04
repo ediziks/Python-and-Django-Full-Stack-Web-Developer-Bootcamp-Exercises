@@ -1,0 +1,23 @@
+div{
+	color: red;
+}
+.firstDiv{
+	color: blue;
+}
+
+#singledout{
+	color: purple;
+	text-decoration: underline;
+}
+
+*{
+	background: grey;
+}
+
+h3 + ul{
+	border: 5px dotted purple;
+}
+li a[href="https://www.medium.com"]{
+	color: brown;
+	border: 2px solid orange;
+}
