@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>grid Bootstrap</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+	<style>
+		.boxy{
+			background: #b3ddff;
+			border: 2px solid black;
+		}
+	</style>
+	<div class="container">
+	  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+	  <div class="row">
+	    <div class="col-md-8 boxy">.col-md-8</div>
+	    <div class="col-6 col-md-4 boxy">.col-6 .col-md-4</div>
+	  </div>
+
+	  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+	  <div class="row">
+	    <div class="col-6 col-md-4 boxy">.col-6 .col-md-4</div>
+	    <div class="col-6 col-md-4 boxy">.col-6 .col-md-4</div>
+	    <div class="col-6 col-md-4 boxy">.col-6 .col-md-4</div>
+	  </div>
+
+	  <!-- Columns are always 50% wide, on mobile and desktop -->
+	  <div class="row">
+	    <div class="col-6 boxy">.col-6</div>
+	    <div class="col-6 boxy">.col-6</div>
+	  </div>
+	</div>
+</body>
+</html>
