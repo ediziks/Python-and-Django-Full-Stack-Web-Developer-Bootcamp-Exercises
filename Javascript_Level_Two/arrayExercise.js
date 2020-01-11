@@ -8,7 +8,7 @@ var roster = []
 // Create the functions for the tasks
 
 // ADD A NEW STUDENT
-function addNew(name2add) {
+function addNew() {
 	var name2add = prompt("Name: ")
 	roster.push(name2add)
 }
@@ -18,7 +18,7 @@ function addNew(name2add) {
 
 
 // REMOVE STUDENT
-function remove(name2remove) {
+function remove() {
 	var name2remove = prompt("Name: ")
 	// const creates read only reference to a value
 	const index = roster.indexOf(name2remove)
@@ -58,6 +58,7 @@ if (use==="y") {
 		}
 	}
 }
+alert("Thanks for using! Refresh to restart.")
 
 // Now create a while loop that keeps asking for an action (add,remove, display or quit)
 // Use if and else if statements to execute the correct function for each command.
