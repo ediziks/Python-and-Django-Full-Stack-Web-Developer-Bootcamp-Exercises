@@ -1,0 +1,12 @@
+#tbl{
+	margin: auto;
+}
+
+td{
+	border: 5px solid black;
+	height: 125px;
+	width: 125px;
+	font-size: 5em;
+	text-align: center;
+}
+
