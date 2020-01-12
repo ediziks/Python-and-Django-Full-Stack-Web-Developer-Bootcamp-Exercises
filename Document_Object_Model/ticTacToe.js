@@ -1,7 +1,7 @@
 var res = document.querySelector("#res")
 
 // or <button onClick="window.location.reload();">Refresh Page</button>
-// in html file
+// in html file for refreshing page
 res.addEventListener("click", function(){
 	window.location.reload()
 })
