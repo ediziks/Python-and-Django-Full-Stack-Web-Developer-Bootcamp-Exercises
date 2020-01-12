@@ -58,6 +58,10 @@ var employee = {
   	var ln = this.name.split(" ")
   	console.log("Last name: " + ln[1])
   }
+  // Shorter version
+  lastName2: function(){
+  	console.log(this.name.split(" ")[1])
+  }
 }
 
 // Add a method called lastName that prints
