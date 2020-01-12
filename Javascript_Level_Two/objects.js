@@ -1,3 +1,5 @@
+// Basic object samples w/this method
+
 var smpl = {
 	prop: "Hello",
 	myMethod: function(){
