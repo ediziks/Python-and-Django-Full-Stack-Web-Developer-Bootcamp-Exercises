@@ -1,7 +1,7 @@
 var res = document.querySelector("#res")
 
 // or <button onClick="window.location.reload();">Refresh Page</button>
-// in html file for refreshing page
+// in html file for refreshing the page
 res.addEventListener("click", function(){
 	window.location.reload()
 })
@@ -23,7 +23,7 @@ for (var i = 0; i < squares.length; i++ ) {
 }
 
 
-// LONG VERSION
+//// LONG VERSION
 
 // var td1 = document.querySelector("#td1")
 // var td2 = document.querySelector("#td2")
