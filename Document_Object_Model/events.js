@@ -3,21 +3,21 @@ var headTwo = document.querySelector("#two")
 var headThree = document.querySelector("#three")
 
 headOne.addEventListener('mouseover', function(){
-	headOne.textContent = "Mouse Currently Over"
+	headOne.textContent = "Mouse Currently Over!!!"
 	headOne.style.color = "red"
 })
 
 headOne.addEventListener("mouseout", function(){
-	headOne.textContent = "HOVER OVER ME!"
+	headOne.textContent = "HOVER OVER ME!!"
 	headOne.style.color = "black"
 })
 
 headTwo.addEventListener("click", function(){
-	headTwo.textContent = "CLICKED ON!"
+	headTwo.textContent = "CLICKED ON!!"
 	headTwo.style.color = "blue"
 })
 
 headThree.addEventListener("dblclick", function(){
-	headThree.textContent = "HAS DOUBLE CLICKED!"
+	headThree.textContent = "HAS DOUBLE CLICKED!!"
 	headThree.style.color = "purple"
 })
