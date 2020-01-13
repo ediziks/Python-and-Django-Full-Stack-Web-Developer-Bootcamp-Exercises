@@ -45,9 +45,9 @@ var employee = {
 
 
 
-///////////////////
-// PROBLEM 3 /////
-/////////////////
+////////////////
+// PROBLEM 3 //
+//////////////
 
 // Given the object:
 var employee = {
