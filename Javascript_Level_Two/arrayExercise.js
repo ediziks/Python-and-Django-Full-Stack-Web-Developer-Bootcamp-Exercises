@@ -21,6 +21,7 @@ function addNew() {
 function remove() {
 	var name2remove = prompt("Name: ")
 	// const creates read only reference to a value
+	// but var also can be used in this case
 	const index = roster.indexOf(name2remove)
 	roster.splice(index, 1)
 }
