@@ -55,7 +55,7 @@ if (use==="y") {
 		}else if (action === "quit") {
 			break
 		}else {
-			alert("Wrong input.")
+			alert("Wrong input. Try again?")
 		}
 	}
 }
