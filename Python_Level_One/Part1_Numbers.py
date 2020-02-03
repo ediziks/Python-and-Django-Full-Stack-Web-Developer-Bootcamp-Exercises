@@ -114,7 +114,7 @@ tax_rate = 0.1
 my_taxes = my_income*tax_rate
 
 # Show my taxes!
-my_taxes
+print(my_taxes)
 
 
 # So what have we learned? We learned some of the basics of numbers in Python.

@@ -36,7 +36,7 @@
 
 
 # Be careful with quotes!
-' I'm using single quotes, but will create an error'
+# ' I'm using single quotes, but will create an error'
 
 
 # The reason for the error above is because the single quote in I'm stopped the
@@ -58,7 +58,6 @@
 # note that we can't output multiple strings this way
 'Hello World 1'
 'Hello World 2'
-
 
 # We can use a print statement to print a string.
 
@@ -93,7 +92,10 @@ s
 # Print the object
 print(s)
 
-
+x = s.lower()
+print(x)
+y = x.capitalize()
+print(y)
 # Let's start indexing!
 
 # Show first element (in this case a letter)
@@ -158,7 +160,7 @@ s[::-1]
 s
 
 # Let's try to change the first letter to 'x'
-s[0] = 'x'
+# s[0] = 'x'
 
 
 # Notice how the error tells us directly what we can't do,
