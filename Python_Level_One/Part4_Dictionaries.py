@@ -35,15 +35,15 @@ my_dict['key2']
 # Its important to note that dictionaries are very flexible in the data types
 # they can hold. For example:
 
-my_dict = {'key1':123,'key2':[12,23,33],'key3':['item0','item1','item2']}
+my_dict = {'key1': 123, 'key2': [12, 23, 33], 'key3': ['item0', 'item1', 'item2']}
 
-#Lets call items from the dictionary
+# Lets call items from the dictionary
 my_dict['key3']
 
 # Can call an index on that value
 my_dict['key3'][0]
 
-#Can then even call methods on that value
+# Can then even call methods on that value
 my_dict['key3'][0].upper()
 
 # We can effect the values of a key as well. For instance:
@@ -52,7 +52,7 @@ my_dict['key1']
 # Subtract 123 from the value
 my_dict['key1'] = my_dict['key1'] - 123
 
-#Check
+# Check
 my_dict['key1']
 
 
@@ -77,7 +77,7 @@ d['animal'] = 'Dog'
 # Can do this with any object
 d['answer'] = 42
 
-#Show
+# Show
 d
 
 

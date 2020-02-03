@@ -86,9 +86,8 @@ len('Hello World')
 # Assign s as a string
 s = 'Hello World'
 
-#Check
+# Check
 s
-
 # Print the object
 print(s)
 
@@ -96,6 +95,7 @@ x = s.lower()
 print(x)
 y = x.capitalize()
 print(y)
+
 # Let's start indexing!
 
 # Show first element (in this case a letter)
