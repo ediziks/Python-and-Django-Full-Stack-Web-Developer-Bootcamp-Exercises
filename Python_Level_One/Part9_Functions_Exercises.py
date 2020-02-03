@@ -16,12 +16,19 @@
 
 # For example:
 
-# arrayCheck([1, 1, 2, 3, 1]) → True
-# arrayCheck([1, 1, 2, 4, 1]) → False
-# arrayCheck([1, 1, 2, 1, 2, 3]) → True
+# arrayCheck([1, 1, 2, 3, 1]) => True
+# arrayCheck([1, 1, 2, 4, 1]) => False
+# arrayCheck([1, 1, 2, 1, 2, 3]) => True
 
 def arrayCheck(nums):
-    # CODE GOES HERE
+	# CODE GOES HERE
+	k = False
+	for i in range(len(nums)):
+		if nums[i:i+3] == [1, 2, 3]:
+			k = True
+	return k
+
+print(arrayCheck([1, 1, 2, 3, 1, 2, 7, 4]))
 
 
 #####################
@@ -33,13 +40,15 @@ def arrayCheck(nums):
 
 # For example:
 
-# stringBits('Hello') → 'Hlo'
-# stringBits('Hi') → 'H'
-# stringBits('Heeololeo') → 'Hello'
+# stringBits('Hello') => 'Hlo'
+# stringBits('Hi') => 'H'
+# stringBits('Heeololeo') => 'Hello'
 
 def stringBits(str):
-  # CODE GOES HERE
+	# CODE GOES HERE
+	return str[::2]
 
+print(stringBits('Heeeeeelo'))
 
 #####################
 ## -- PROBLEM 3 -- ##
@@ -53,13 +62,22 @@ def stringBits(str):
 #
 # Examples:
 #
-# end_other('Hiabc', 'abc') → True
-# end_other('AbC', 'HiaBc') → True
-# end_other('abc', 'abXabc') → True
+# end_other('Hiabc', 'abc') => True
+# end_other('AbC', 'HiaBc') => True
+# end_other('abc', 'abXabc') => True
 
 
 def end_other(a, b):
-  # CODE GOES HERE
+	# CODE GOES HERE
+	x = a.lower() 
+	y = b.lower()
+	i = len(x)
+	k = len(y)
+
+	return x == y[k-i:] or y == x[i-k:]
+
+print(end_other('abcde', 'abXabcde'))
+
 
 #####################
 ## -- PROBLEM 4 -- ##
@@ -68,12 +86,19 @@ def end_other(a, b):
 # Given a string, return a string where for every char in the original,
 # there are two chars.
 
-# doubleChar('The') → 'TThhee'
-# doubleChar('AAbb') → 'AAAAbbbb'
-# doubleChar('Hi-There') → 'HHii--TThheerree'
+# doubleChar('The') => 'TThhee'
+# doubleChar('AAbb') => 'AAAAbbbb'
+# doubleChar('Hi-There') => 'HHii--TThheerree'
 
 def doubleChar(str):
   # CODE GOES HERE
+  y = ''
+  for x in str:
+  	y = y + x*2
+
+  return y
+
+print(doubleChar('Hi-There'))
 
 
 #####################
@@ -93,14 +118,36 @@ def doubleChar(str):
 #
 # Examples:
 #
-# no_teen_sum(1, 2, 3) → 6
-# no_teen_sum(2, 13, 1) → 3
-# no_teen_sum(2, 1, 14) → 3
+# no_teen_sum(1, 2, 3) => 6
+# no_teen_sum(2, 13, 1) => 3
+# no_teen_sum(2, 1, 14) => 3
 
 def no_teen_sum(a, b, c):
-  # CODE GOES HERE
+  	# CODE GOES HERE
+  	return fix_teen(a) + fix_teen(b) + fix_teen(c)
+
 def fix_teen(n):
-  # CODE GOES HERE
+	# CODE GOES HERE
+	if n in [13,14,17,18,19]:
+		return 0
+	return n
+
+print(no_teen_sum(2, 3 ,16))
+
+# ONE FUNC SOLUTION
+# def no_teen_sum(a, b, c):
+#   # CODE GOES HERE
+#   	sum = a + b + c
+#   	if a in range(13, 15) or a in range(17,19):
+#   		sum -= a
+#   	if b in range(13, 15) or b in range(17,19):
+#   		sum -= b
+#   	if c in range(13, 15) or c in range(17,19):
+#   		sum -= c
+
+# 	return sum
+
+
 
 #####################
 ## -- PROBLEM 6 -- ##
@@ -110,9 +157,17 @@ def fix_teen(n):
 #
 # Examples:
 #
-# count_evens([2, 1, 2, 3, 4]) → 3
-# count_evens([2, 2, 0]) → 3
-# count_evens([1, 3, 5]) → 0
+# count_evens([2, 1, 2, 3, 4]) => 3
+# count_evens([2, 2, 0]) => 3
+# count_evens([1, 3, 5]) => 0
 
 def count_evens(nums):
-  # CODE GOES HERE
+	# CODE GOES HERE
+	leneven = []
+	for i in nums:
+		if i % 2 == 0:
+			leneven.append(i)
+
+	return len(leneven)
+
+print(count_evens([2, 1, 2, 3, 4, 6, 7]))
