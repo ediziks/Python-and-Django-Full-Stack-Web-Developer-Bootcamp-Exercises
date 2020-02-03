@@ -23,13 +23,40 @@
 
 # Try to figure out what this code is doing and how it might be useful to you
 import random
+
 digits = list(range(10))
 random.shuffle(digits)
 print(digits[:3])
 
 # Another hint:
-guess = input("What is your guess? ")
-print(guess)
-
+# guess = input("What is your guess? ")
+# print(guess)
+end = ""
 # Think about how you will compare the input to the random number, what format
 # should they be in? Maybe some sort of sequence? Watch the Lecture video for more hints!
+def game(guess):
+	strguess = str(guess)
+	guesslst = []
+
+	for i in range(len(strguess)):
+		guesslst.append(int(strguess[i]))
+
+	while True:
+		if guesslst == digits[:3]:
+			end = "Congrats! You're a wizard!!"
+			print(end)
+			break
+		elif guesslst[0] not in digits[:3] and guesslst[1] not in digits[:3] and guesslst[2] not in digits[:3]:
+			print("Nope")
+		elif guesslst[0] == digits[0] or guesslst[1] == digits[1] or guesslst[2] == digits[2]:
+			print("Match")
+		elif guesslst[0] in digits[:3] or guesslst[1] in digits[:3] or guesslst[2] in digits[:3]:
+			print("Close")
+		else:
+			print("Wrong input :(")
+
+		guess = input("What is your guess? ")
+		game(guess)
+
+guess = input("What is your guess? ")
+game(guess)
