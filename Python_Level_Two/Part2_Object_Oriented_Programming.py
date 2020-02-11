@@ -194,7 +194,6 @@ class Circle():
     def getRadius(self):
         return self.radius
 
-
 c = Circle()
 
 c.setRadius(2)
@@ -240,6 +239,7 @@ class Dog(Animal):
 
     def bark(self):
         print "Woof!"
+
 
 d = Dog()
 d.whoAmI()
