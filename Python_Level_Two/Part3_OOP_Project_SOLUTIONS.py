@@ -142,8 +142,11 @@ while user.still_has_cards() and comp.still_has_cards():
         table_cards.extend(comp.remove_war_cards())
 
         # Play cards
-        c_card = comp.play_card()
-        p_card = user.play_card()
+        if c_card != 0 or p_card != 0:
+            c_card = comp.play_card()
+            p_card = user.play_card()
+        else:
+            break
 
         # Add to table_cards
         table_cards.append(c_card)
