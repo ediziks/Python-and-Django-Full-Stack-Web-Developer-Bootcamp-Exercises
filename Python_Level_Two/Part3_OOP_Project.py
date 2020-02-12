@@ -76,7 +76,6 @@ class Player():
     def play_card(self):
         drawn_card = self.hand.remove_card()
         print("{} has placed by: {}".format(self.name, drawn_card))
-        print('\n')
         return drawn_card
 
     def remove_war_cards(self):
@@ -97,8 +96,6 @@ class Player():
 ######################
 print("Welcome to War, let's begin...")
 
-# Use the 3 classes along with some logic to play a game of war!
-
 d = Deck()
 d.shuffle()
 half1,half2 = d.split_deck()
@@ -117,7 +114,6 @@ while user.hand_check() and comp.hand_check():
     print(user.name + " count: " + str(len(user.hand.cards)))
     print(comp.name + " count: " + str(len(comp.hand.cards)))
     print("Both players play a card!")
-    print('\n')
 
     table_cards = []
 
