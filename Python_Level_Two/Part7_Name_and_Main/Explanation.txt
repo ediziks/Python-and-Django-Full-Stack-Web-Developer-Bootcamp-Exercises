@@ -74,3 +74,12 @@ You get
   two.py is being run directly
   
 Thus, when module one gets loaded, its __name__ equals "one" instead of __main__.
+
+
+Whenever the Python interpreter reads a source file, it does two things:
+
+  - it sets a few special variables like __name__, and then
+
+  - it executes all of the code found in the file.
+
+
