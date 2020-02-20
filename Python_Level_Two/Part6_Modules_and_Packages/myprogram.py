@@ -5,6 +5,7 @@
 
 import mymodule
 mymodule.func_in_mymodule()
+mymodule.another_func_in_mymodule()
 
 ################
 # Example Two:
