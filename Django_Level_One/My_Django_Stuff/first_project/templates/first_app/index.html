@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
   <title>First App</title>
+  <link rel="stylesheet" href="{% static "css/style.css" %}"/>
 </head>
 <body>
-  <h1>This is index.html!</h1>
-  {{ insert_me }}
+  <h1>This is Dali Himself!</h1>
+  <p>{{ insert_me }}</p>
+  <img src="{% static "images/dali.jpg" %}" alt="Sorry man, couldn't show!">
 </body>
 </html>
