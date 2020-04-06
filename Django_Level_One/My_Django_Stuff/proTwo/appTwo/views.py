@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(req):
-  return HttpResponse('<em>My 2nd App</em>')
+  return HttpResponse('<em>My 2nd App</em><p><ul><li><a class="button" href="/help">Help</a></li></ul></p>')
 
   
 def help(req):
