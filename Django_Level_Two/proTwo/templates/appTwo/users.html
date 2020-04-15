@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Users</title>
+</head>
+<body>
+  <h1>Welcome to the USERS!!!</h1>
+  {% if show_users %}
+  <div class="userList">
+    <ol>
+    {% for usr in show_users %}
+    <br>
+      <li>User's Info</li>
+        <ul>
+          <li>First Name: <b>{{ usr.first_name }}</b></li>
+          <li>Last Name: <b>{{ usr.last_name }}</b></li>
+          <li>Mail: <b>{{ usr.mail }}</b></li>
+        </ul>
+    {% endfor %}
+    </ol>
+  </div>
+  {% endif %}
+</body>
+</html>
