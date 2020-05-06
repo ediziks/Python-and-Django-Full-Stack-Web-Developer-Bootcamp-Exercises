@@ -21,5 +21,7 @@ def users(req):
       print('VALIDATION SUCCESSFUL!')
       print('NAME: '+ form.cleaned_data['name'])
       print('EMAIL: '+ form.cleaned_data['email'])
+    else:
+      print('ERROR: INVALID FORM')
 
   return render(req, 'appTwo/users.html', {'form': form})

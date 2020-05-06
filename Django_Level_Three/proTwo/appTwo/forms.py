@@ -19,4 +19,4 @@ class User(forms.Form):
 class UserForm(forms.ModelForm):
   class Meta:
     model = Users
-    fields = ['name', 'email']
+    fields = ['name', 'email'] # fields = '__all__'
