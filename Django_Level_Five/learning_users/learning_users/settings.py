@@ -25,7 +25,7 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = 'wi_kwt5%eh3_kckwf26w)@ubn%j10=!zu%laah4gt2e%c%mhzt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 1
 
 ALLOWED_HOSTS = []
 
@@ -135,3 +135,5 @@ STATICFILES_DIRS = [STATIC_DIR]
 # MEDIA
 MEDIA_URL = '/media/'
 MEDIA_ROOT = MEDIA_DIR
+
+LOGIN_URL = '/basic_app/user_login/'
