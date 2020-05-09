@@ -1,9 +1,25 @@
 from django.shortcuts import render
 from basic_app.forms import UserForm, UserProfileForm
 
+# Built-in libraries
+from django.contrib.auth import authenticate, login, logout
+from django.http import HttpResponseRedirect, HttpResponse
+from django.urls import reverse
+from django.contrib.auth.decorators import login_required
+
+
 # Create your views here.
 def index(req):
   return render(req, 'basic_app/index.html')
+
+@login_required
+def special(req):
+  return HttpResponse("You're logged in! Cool ya?")
+
+@login_required
+def user_logout(req):
+  logout(req)
+  return HttpResponseRedirect(reverse('index'))
 
 def register(req):
   registered = False
@@ -36,3 +52,24 @@ def register(req):
                      {'user_form': user_form,
                       'profile_form': profile_form,
                       'registered': registered})
+
+def user_login(req):
+  if req.method == 'POST':
+    username = req.POST.get('username')
+    password = req.POST.get('password')
+
+    user = authenticate(username=username, password=password)
+
+    if user:
+      if user.is_active:
+        login(req, user)
+        return HttpResponseRedirect(reverse('index'))
+
+      else:
+        return HttpResponse("ACCOUNT NOT ACTIVE")
+    else:
+      print('Someone tried to login and failed!')
+      print('Username: {} and Password: {}'.format(username, password))
+      return HttpResponse("Invalid login details entered!")
+  else:
+    return render(req, 'basic_app/login.html', {})
