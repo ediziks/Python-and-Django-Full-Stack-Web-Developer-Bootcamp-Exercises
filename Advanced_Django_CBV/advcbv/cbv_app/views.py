@@ -27,7 +27,7 @@ class SchoolListView(ListView):
   context_object_name = 'schools'
   model = models.School
   # returns 'school_list'
-  # after contex_object_name it returns 'schools'
+  # after contex_object_name var, it returns 'schools'
 
 class SchoolDetailView(DetailView):
   context_object_name = 'school_detail'

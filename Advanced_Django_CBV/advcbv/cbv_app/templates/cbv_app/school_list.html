@@ -1,11 +1,16 @@
 {% extends "cbv_app/cbv_app_base.html" %}
 {% block body_block %}
-    
-<h1>List of all Schools</h1>
-  <ol>
-    {% for school in schools %}
-      <h2><li><a href="{{ school.id }}">{{ school.name }}</a></li></h2>
-    {% endfor %}
-  </ol>
+ 
+<div class="jumbotron">   
+  <h1>List of all Schools</h1>
+    <br>
+    <ol>
+      {% for school in schools %}
+        <h2><li><a href="{{ school.id }}">{{ school.name }}</a></li></h2>
+      {% endfor %}
+    </ol>
+    <br>
+    <p><a class="btn btn-primary" href="{% url 'cbv_app:create' %}">Create Another</a></p>
+</div>
 
 {% endblock body_block %}

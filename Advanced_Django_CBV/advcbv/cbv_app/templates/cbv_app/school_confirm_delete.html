@@ -1,11 +1,13 @@
 {% extends "cbv_app/cbv_app_base.html" %}
 {% block body_block %}
-    
-<h1>Delete {{ school.name }}?</h1>
-<form method="POST">
-  {% csrf_token %}
-  <input type="submit" name="delete" class="btn btn-danger" value="Delete">
-  <a href="{% url 'cbv_app:detail' pk=school.pk %}">Cancel</a>
-</form>
+
+<div class="jumbotron">    
+  <h1>Are you fucking serious?! You're gonna delete the <b color="red">{{ school.name }}</b> man?</h1>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="submit" name="delete" class="btn btn-danger" value="Delete">
+    <a href="{% url 'cbv_app:detail' pk=school.pk %}">Cancel</a>
+  </form>
+</div>
 
 {% endblock body_block %}
