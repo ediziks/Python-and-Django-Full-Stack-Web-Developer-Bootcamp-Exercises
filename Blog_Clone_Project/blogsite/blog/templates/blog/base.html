@@ -1,9 +1,60 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
-<head>
-  <title></title>
-</head>
-<body>
 
+<head>
+  <title>Blog</title>
+  {# Bootstrap #}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  {# Medium Style Editor #}
+  <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+  {# Custom CSS #}
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  {# Fonts #}
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body class="loader">
+  {# NAVBAR #}
+  {# custom=navbar may be needed in the class #}
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary techfont">
+    <ul class="navbar-nav mr-auto">
+      <li><a class="navbar-brand bigbrand" href="{% url 'post_list' %}">Shitty Blog</a></li>
+      <li><a class="nav-link" href="{% url 'about' %}">About</a></li>
+      <li><a class="nav-link" href="{% url 'admin:index' %}">Admin</a></li>
+      <li><a class="nav-link" href="https://github.com/eemektas">Github</a></li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      {% if user.is_authenticated %}
+      <li>
+        <a href="{% url 'post_new' %}">New Shit</a>
+      </li>
+      <li>
+        <a href="{% url 'post_draft_list' %}">Drafts</a>
+      </li>
+      <li>
+        <a href="{% url 'logout' %}">Log the Hell Out!</a>
+      </li>
+      <li>
+        <a>Welcome {{ user.username }}</a>
+      </li>
+      {% else %}
+      <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-user">Login</span></a></li>
+      {% endif %}
+    </ul>
+  </nav>
+  {# CONTENT BLOCK #}
+  <div class="content container">
+    <div class="row">
+      <div class="blog_posts">
+        {% block content %}
+        {% endblock content %}
+      </div>
+    </div>
+  </div>
+  {# SCRIPTS#}
+  <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
 </body>
+
 </html>
