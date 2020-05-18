@@ -1,6 +1,7 @@
 from django.urls import path, re_path
 from cbv_app import views
 
+
 app_name = 'cbv_app'
 
 urlpatterns = [
