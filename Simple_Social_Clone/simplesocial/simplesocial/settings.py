@@ -14,13 +14,13 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'wb-3mmx9ip5k+!vie!$+5gb_9z1b)#h!o=tds7@u6yc7z%)_**'
+SECRET_KEY = 'fek*py5(q@iw_7zy(aw1y-^7n%jlxupa@08r5ly$_d$do7k+sf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,10 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # added
-    'django.contrib.sites',
-    'robots',
-    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -58,7 +54,7 @@ ROOT_URLCONF = 'simplesocial.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,7 +117,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-SITE_ID = 1
-
 STATIC_URL = '/static/'
-STATICFILS_DIR = [os.path.join(BASE_DIR, 'static')]
