@@ -24,20 +24,23 @@
       </ul>
       <ul class="navbar-nav ml-auto">
         {% if user.is_authenticated %}
-        <li><a href="#">New Shit</a></li>
-        <li><a href="#">Drafts</a></li>
-        <li><a href="{% url 'logout' %}">Log the Hell Out!</a></li>
-        <li><a>Welcome {{ user.username }}</a></li>
+          <li><a href="#">Post</a></li>
+          <li><a href="#">Groups</a></li>
+          <li><a href="#">Create Group</a></li>
+          <li><a href="{% url 'accounts:logout' %}">Log the Hell Out!</a></li>
+          <li><a>Welcome {{ user.username }}</a></li>
         {% else %}
-        <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-user">Login</span></a></li>
+          <li><a href="#">Groups</a></li>
+          <li><a href="{% url 'accounts:login' %}">Login</a></li>
+          <li><a href="{% url 'accounts:signup' %}">Sign Up</a></li>
         {% endif %}
       </ul>
     </nav>
-
+    <div class="container mycontent">
     {% block content %}
       
     {% endblock content %}
-
+    </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
