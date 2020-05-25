@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'robots',
     'bootstrap4',
     'accounts',
+    'groups',
+    'posts',
 ]
 
 MIDDLEWARE = [
