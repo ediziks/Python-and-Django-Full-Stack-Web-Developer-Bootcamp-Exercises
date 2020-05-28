@@ -21,10 +21,10 @@
 	<div class="col-md-8">
 		<div class="list-group">
 			{% for group in object_list %}
-				<a class="list-group-item" href="{% url 'groups:single' slug=group.slug %}"></a>
-				<h3 class="modal-title list-group-item-heading">{{group.name}}</h3>
+				<a class="list-group-item" href="{% url 'groups:single' slug=group.slug %}">
+				<h3 class="modal-title list-group-item-heading">{{group.name}}</h3></a>
 				<div class="list-group-item-text container-fluid">
-					{{group.description_html|safe}}
+					strong{{group.description_html|safe}}
 					<div class="row">
 						<div class="col-md-4">
 							<span class="badge">{{group.members.count}}</span>
